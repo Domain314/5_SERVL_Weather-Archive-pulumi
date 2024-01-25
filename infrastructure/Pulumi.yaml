@@ -1,0 +1,6 @@
+name: servl-weather-archive
+runtime:
+  name: nodejs
+  options:
+    typescript: false
+description: A JavaScript Pulumi program, for Serverless Computing, 5. Semester

@@ -1,0 +1,10 @@
+{
+    "name": "lambdalayer",
+    "main": "index.js",
+    "dependencies": {
+        "aws-sdk": "^2.1542.0",
+        "redis": "^4.6.12",
+        "sharp": "^0.33.2",
+        "util": "^0.12.5"
+    }
+}

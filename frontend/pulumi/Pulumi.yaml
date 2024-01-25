@@ -1,0 +1,6 @@
+name: s3upload
+runtime:
+  name: nodejs
+  options:
+    typescript: false
+description: upload react app to s3 bucket.
