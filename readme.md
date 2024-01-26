@@ -140,14 +140,20 @@ You have 2 ways to set up the infrastructure: Fast Install and Manual Install.
 21. As API, I will return the cached results if the requested topic and time period is already in the Redis cache. [Lambda: frontendApi: query.js](/infrastructure/resources/lambdas/frontendApi/res/query.js#L25)
 
 ~~22. As PictureService, I want to get notified when a new entry was made to the database (e.g. image location). The notification event can come from the database OR the S3 Bucket.~~
+
 ~~23. As PictureService, I would like to be able to retrieve data from the S3 Bucket. (VideoService can retrieve Data from S3 bucket)~~
+
 24. As PictureService, I would like to be able to store data in the S3 Bucket. [Lambda: pictureService: index.js](infrastructure/resources/lambdas/pictureService/index.js#L29)
 25. As PictureService, I want to be able to resize an image (compress). [Lambda: pictureService: index.js](infrastructure/resources/lambdas/pictureService/index.js#L14)
 
 ~~26. As VideoService, I would like to be scheduled for a specific time period.~~
+
 ~~27. As VideoService, I would like to be able to read the database.~~
+
 ~~28. As VideoService, I would like to be able to create a video based on the images of that topic (that were sent from the webcam).~~
+
 ~~29. As VideoService, I will only create a video per time period (so a picture that was already used in a past video will not be used for the new schedule).~~
+
 ~~30. As VideoService, I want to be able to store a video in a S3 Bucket Evaluation.~~
 
 ---
