@@ -116,7 +116,7 @@ You have 2 ways to set up the infrastructure: Fast Install and Manual Install.
 ## User Stories
 1. As a user, I want to navigate to “The Weather Archive” application in the browser and see a logo and a search bar with a button. (similar to the Google Homepage). [Frontend: FrontPage.jsx](/frontend/react/src/components/pages/FrontPage.jsx)
 2. As a user, I would like to type into the search bar and to retrieve autocomplete results (topics e.g. cities) in a list.
-  - [Frontend: FrontPage.jsx](/frontend/react/src/components/pages/FrontPage.jsx#L40)
+- [Frontend: FrontPage.jsx](/frontend/react/src/components/pages/FrontPage.jsx#L40)
 3. As a user, I am only able to choose topics (e.g. cities) from the autocomplete.
   - [Frontend: FrontPage.jsx](/frontend/react/src/components/pages/FrontPage.jsx#L75)
 4. As a user, I want to retrieve an error message when I am searching for a topic that is not in the autocomplete list.
