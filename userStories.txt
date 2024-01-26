@@ -1,0 +1,60 @@
+The Weather Archive Student Project Specification
+
+The project should use the following technologies:
+- Amazon Web Services
+    -- S3 Bucket – for the images
+    -- RDS Postgres – for data storage
+    -- Lambda’s – where possible
+- Redis Cloud
+    -- Redis – for cache
+
+User Groups:
+• Webcams: can send data to the API (via an API Key).
+• Users: can retrieve the weather data (video + plots for a specific city)
+
+User Stories:
++ 1. As a user, I want to navigate to “The Weather Archive” application in the browser and see a logo and a search bar with a button. (similar to the Google Homepage).
++ 2. As a user, I would like to type into the search bar and to retrieve autocomplete results (topics e.g. cities) in a list.
++ 3. As a user, I am only able to choose topics (e.g. cities) from the autocomplete.
++ 4. As a user, I want to retrieve an error message when I am searching for a topic that is not in the autocomplete list.
++ 5. As a user, I would like to be taken to a new site when I select a valid topic from the autocomplete and click on the search button.
++ 6. As a user, I would like to see a heading (topic, e.g. Vienna), a video (a compilation of the time period), a plot of the metadata (temperature, humidity, air pressure - of that time period), a date-picker, and a slider to select the hour of the day on the new page.
++ 7. As a user, I am only able to select dates that are available.
++ 8. As a user, I can only select hours that are available for the selected date.
++ 9. As a user, I want to see the logo of “The Weather Archive” on the new page so that I can navigate back to the homepage when I click on it.
++ 10. As a user, I would like to receive good (human-readable) error messages when something goes wrong.
+
++ 11. As a webcam, I would like to be able to communicate via a RESTful Interface to POST data (an image, the topic, and metadata) to the API.
++ 12. As a webcam, I want to use an API key when communicating with the API to ensure only authenticated users can POST data.
++ 13. As a webcam, I would like to receive good error codes when something goes wrong.
+
++ 14. As API, I would like to be able to store an image in an object storage.
++ 15. As API, I want to be able to store data (image location, topic, timestamps, metadata) in a database.
++ 16. As API, I would like to be able to retrieve the data from the database.
++ 17. As API, I would like to be able to retrieve data from the S3 Bucket.
+
++ 18. As API, I want to be able to store data in the Redis Cache.
++ 19. As API, I would like to be able to retrieve data from the Cache.
++ 20. As API, I will not access the DB if the requested topic and time period is already in the Redis cache.
++ 21. As API, I will return the cached results if the requested topic and time period is already in the Redis cache.
+
+-- 22. As PictureService, I want to get notified when a new entry was made to the database (e.g. image location). The notification event can come from the database OR the S3 Bucket.
+~ 23. As PictureService, I would like to be able to retrieve data from the S3 Bucket. (VideoService can retrieve Data from S3 bucket)
++ 24. As PictureService, I would like to be able to store data in the S3 Bucket.
++ 25. As PictureService, I want to be able to resize an image (compress).
+
+-- 26. As VideoService, I would like to be scheduled for a specific time period.
+- 27. As VideoService, I would like to be able to read the database.
+-- 28. As VideoService, I would like to be able to create a video based on the images of that topic (that were sent from the webcam).
+-- 29. As VideoService, I will only create a video per time period (so a picture that was already used in a past video will not be used for the new schedule).
+-- 30. As VideoService, I want to be able to store a video in a S3 Bucket Evaluation.
+
+
+// redis user: aws-user
+// redis password: FHTechnikumWien-1
+
+// redis api-key: Spynkvytf8ntnvn0jymgycibsz0ud4qldpdff9qrpxk8syn39v
+// redis api-user: Artjom Moisejev
+// redis api account key: A6d7amy185t8uxe7ji5h5vh5657fshf6mn7b7vbg286c8h74phw
+
+// no redis in pulumi integration for free redis accounts. :(
